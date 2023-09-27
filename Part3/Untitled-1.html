@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selections</title>
+    <style>
+        /* Select links whose href attribute starts with "https" and make them red */
+        a[href^="https"] {
+            color: red;
+        }
+
+        /* Apply styles to the last link in the first list (link6) and give it a green background color */
+        ul:first-child li:last-child a {
+            background-color: green;
+        }
+
+        /* Apply styles to <p> elements that come after <ul> and set the font size to 26px */
+        ul + p {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="http://example.com">link1</a></li>
+        <li><a href="https://www.example.com">link2</a></li>
+        <li><a href="https://www.openai.com">link3</a></li>
+        <li><a href="https://www.google.com">link4</a></li>
+        <li><a href="https://www.facebook.com">link5</a></li>
+        <li><a href="https://www.link6.com">link6 (Green Background)</a></li>
+    </ul>
+    <p>This is a paragraph before the first list.</p>
+    <ul>
+        <li><a href="https://www.example.com">link7</a></li>
+        <li><a href="https://www.example.com">link8</a></li>
+    </ul>
+    <p>This is a paragraph after the second list with increased font size.</p>
+</body>
+</html>
